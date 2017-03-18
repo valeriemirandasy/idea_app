@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6" style="margin-top: 150px;">
+    	<%= image_tag(@idea.picture_url, :width => 400) if @idea.picture.present? %>
+    </div><br><br>
+    <div class="col-sm-6" style="background-color:#f1f1f1; margin-top: 200px; margin-bottom: 50px; text-align: center;">
+    	<h1><%= @idea.name %></h1>
+  		<p><strong>Description: </strong><i> <%= @idea.description %></i></p>
+  		<br>
+    </div><center>
+		<%= link_to 'Edit', edit_idea_path(@idea), :class => 'btn btn-success btn-medium' %> &nbsp;&nbsp;
+		<%= link_to 'Back', ideas_path, :class => 'btn btn-primary btn-medium' %>
+		</center>
+  </div>
+</div>
+
